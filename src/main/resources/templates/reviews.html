@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>reviews</title>
+		<link th:href="@{/css/style.css}" href="/css/style.css" rel="stylesheet" type="text/css"   />
+
+		<h1>Flooring Company Reviews</h1>
+<img th:id="image" th:src="@{/images/floordog.jpg}">
+		<div  th:each="review: ${reviews}">
+		<li th:id="reviews">
+	<a th:href="@{/review(id=${review.id})}" th:text="${review.name}"></a>
+	</li>
+		</div>
+
+
+
+</body>
+</html>
